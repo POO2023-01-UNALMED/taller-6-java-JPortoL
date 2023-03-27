@@ -13,7 +13,7 @@ public class Vehiculo {
     protected Fabricante fabricante;
     static protected int cantidadVehiculos;
     static protected List<Pais> paises;
-    static protected List<Fabricante> fabricantes;
+    static protected List<Fabric> fabricantes;
 
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio,
     int peso, String traccion, Fabricante fabricante){
