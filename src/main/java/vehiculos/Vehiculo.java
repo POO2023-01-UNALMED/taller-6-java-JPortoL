@@ -1,6 +1,7 @@
 package vehiculos;
 
 import java.util.List;
+import java.util.ArrayList;;
 
 public class Vehiculo {
     protected String placa;
@@ -12,8 +13,8 @@ public class Vehiculo {
     protected String traccion;
     protected Fabricante fabricante;
     static protected int cantidadVehiculos;
-    static protected List<Pais> paises;
-    static protected List<Fabricante> fabricantes;
+    static protected List<Pais> paises = new ArrayList<>();
+    static protected List<Fabricante> fabricantes  = new ArrayList<>();
 
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio,
     int peso, String traccion, Fabricante fabricante){
@@ -26,10 +27,8 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         Vehiculo.cantidadVehiculos++;
-        if (fabricante != null) {
-            paises.add(fabricante.getPais());
-            fabricantes.add(fabricante);
-        }
+        paises.add(fabricante.getPais());
+        fabricantes.add(fabricante);
     }
 
     public String vehiculosPorTipo(){
