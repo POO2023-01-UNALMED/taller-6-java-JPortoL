@@ -26,8 +26,10 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         Vehiculo.cantidadVehiculos++;
-        paises.add(fabricante.getPais());
-        fabricantes.add(fabricante);
+        if (fabricante != null) {
+            paises.add(fabricante.getPais());
+            fabricantes.add(fabricante);
+        }
     }
 
     public String vehiculosPorTipo(){
